@@ -1,0 +1,13 @@
+C:\Users\Администратор\source\repos\HWTBM7\HWTBM7\bin\Debug\netcoreapp3.1\HWTBM7.exe
+C:\Users\Администратор\source\repos\HWTBM7\HWTBM7\bin\Debug\netcoreapp3.1\HWTBM7.deps.json
+C:\Users\Администратор\source\repos\HWTBM7\HWTBM7\bin\Debug\netcoreapp3.1\HWTBM7.runtimeconfig.json
+C:\Users\Администратор\source\repos\HWTBM7\HWTBM7\bin\Debug\netcoreapp3.1\HWTBM7.runtimeconfig.dev.json
+C:\Users\Администратор\source\repos\HWTBM7\HWTBM7\bin\Debug\netcoreapp3.1\HWTBM7.dll
+C:\Users\Администратор\source\repos\HWTBM7\HWTBM7\bin\Debug\netcoreapp3.1\HWTBM7.pdb
+C:\Users\Администратор\source\repos\HWTBM7\HWTBM7\obj\Debug\netcoreapp3.1\HWTBM7.csprojAssemblyReference.cache
+C:\Users\Администратор\source\repos\HWTBM7\HWTBM7\obj\Debug\netcoreapp3.1\HWTBM7.AssemblyInfoInputs.cache
+C:\Users\Администратор\source\repos\HWTBM7\HWTBM7\obj\Debug\netcoreapp3.1\HWTBM7.AssemblyInfo.cs
+C:\Users\Администратор\source\repos\HWTBM7\HWTBM7\obj\Debug\netcoreapp3.1\HWTBM7.csproj.CoreCompileInputs.cache
+C:\Users\Администратор\source\repos\HWTBM7\HWTBM7\obj\Debug\netcoreapp3.1\HWTBM7.dll
+C:\Users\Администратор\source\repos\HWTBM7\HWTBM7\obj\Debug\netcoreapp3.1\HWTBM7.pdb
+C:\Users\Администратор\source\repos\HWTBM7\HWTBM7\obj\Debug\netcoreapp3.1\HWTBM7.genruntimeconfig.cache
