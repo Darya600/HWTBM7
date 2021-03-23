@@ -11,20 +11,27 @@ namespace HWTBM7
             get;
             private set;
         } 
-        public Answers(string AnserText)
+
+        public int AnswerNumber
+        {
+            get;
+            private set;
+        }
+        public Answers(int AnserNumber, string AnserText)
         {
             this.AnswerText = AnswerText;
+            this.AnswerNumber = AnswerNumber;
         }
     }
     class WrongAnswer : Answers
     {
-        public WrongAnswer(string AnserText): base(AnserText)
+        public WrongAnswer(int AnswerNumber, string AnserText): base(AnswerNumber, AnserText)
         {
         }
     }
     class CorrectAnswer: Answers
     {
-        public CorrectAnswer(string AnserText):base(AnserText)
+        public CorrectAnswer(int AnswerNumber, string AnserText):base(AnswerNumber, AnserText)
         {     
         }
     }
