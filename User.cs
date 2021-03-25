@@ -48,12 +48,20 @@ namespace HWTBM7
                 return name;   
             }
         }
-        
+        public int UserScore;
+        public int UserQuestionNumber
+        {
+            get;
+            private set;
+
+        }
         private string UserName;
         public User(string userName)
         {
             this.UserName = userName;
+            this.UserQuestionNumber = 0;
         }
+      
         
 
     }

@@ -9,8 +9,8 @@ namespace HWTBM7
             if (User.GetUserChoiseLoadSelect() == 1)
             {
                 User newUser = new User(User.GetNewUserName());
-                GameNew currentGame = new GameNew ();
-                currentGame.StartGame();
+                Game currentGame = new NewGame ();
+                currentGame.StartGame(newUser);
             }
             else
             {
