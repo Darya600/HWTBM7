@@ -44,11 +44,14 @@ namespace HWTBM7
                    
                 }
                 int userInput=User.GetUserChoise(1, 4, "Введите номер верного ответа");
+
                 for (int startIndex=0;startIndex<question[numberQuestion].Answer.Length;startIndex++)
                 {
                     if ((userInput == question[numberQuestion].Answer[startIndex].AnswerNumber)&((question[numberQuestion].Answer[startIndex]) is CorrectAnswer))
                     {
                         Console.WriteLine("Ваш ответ верный");
+                        user.IncreaseScore();
+                        user.ZeroScore();
                     }
 
                 }
