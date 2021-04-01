@@ -43,13 +43,16 @@ namespace HWTBM7
                     }
                    
                 }
-                if (question[numberQuestion].Answer[User.GetUserChoise(1, 4, "Введите номер верного ответа")-1] is CorrectAnswer)
+                int userInput=User.GetUserChoise(1, 4, "Введите номер верного ответа");
+                for (int startIndex=0;startIndex<question[numberQuestion].Answer.Length;startIndex++)
                 {
-                    Console.WriteLine("LOVE");
-                }
-                else
-                Console.WriteLine("FUCK");
+                    if ((userInput == question[numberQuestion].Answer[startIndex].AnswerNumber)&((question[numberQuestion].Answer[startIndex]) is CorrectAnswer))
+                    {
+                        Console.WriteLine("Ваш ответ верный");
+                    }
 
+                }
+                
             }
         }
         private  Questions [] CreateQuestionList()
