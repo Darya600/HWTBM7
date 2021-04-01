@@ -5,32 +5,29 @@ using System.Text;
 namespace HWTBM7
 {
     class User
-    {  
-            
-        private static string TextForUser = "Добро пожаловать в игру!!!!" + Environment.NewLine + "Пожалуйста сделайте свой выбор!" + Environment.NewLine +
-                                     "1. Новая игра" + Environment.NewLine + "2. Загрузить игру" + Environment.NewLine + "Введите число:";
-        static public int GetUserChoiseLoadSelect()
+    {
+        static public int GetUserChoise(int numberMin, int numberMax, string Text=null)
         {
-            
-            Console.Write(TextForUser);
-            TextForUser = null;
+
+            Console.Write(Text);
+            Text = null;
             int UserSelect;
             try
             {
                 UserSelect = int.Parse(Console.ReadLine());
-                if(UserSelect>=1&UserSelect<=2) 
+                if (UserSelect >= numberMin & UserSelect <= numberMax)
                 {
                     return UserSelect;
                 } else
                 {
-                    Console.WriteLine("Введите число 1 или 2!");
-                    return GetUserChoiseLoadSelect();
+                    Console.WriteLine("Введите число!");
+                    return GetUserChoise(numberMin,numberMax);
                 }
             }
             catch
             {
                 Console.WriteLine("Введите число!");
-                return GetUserChoiseLoadSelect();
+                return GetUserChoise(numberMin, numberMax);
             }
         }
         static public string GetNewUserName()
@@ -40,29 +37,35 @@ namespace HWTBM7
             name = Console.ReadLine();
             if (name == "")
             {
-              
-               return GetNewUserName();
+
+                return GetNewUserName();
             }
             else
             {
-                return name;   
+                return name;
             }
         }
-        public int UserScore;
+
+
+        public string UserName
+        { get;
+            private set;
+        }
         public int UserQuestionNumber
         {
             get;
             private set;
 
         }
-        private string UserName;
+        public int UserScore
+        { get;
+          private set;
+        }
         public User(string userName)
         {
             this.UserName = userName;
             this.UserQuestionNumber = 0;
+            this.UserScore = 0;
         }
-      
-        
-
     }
 }

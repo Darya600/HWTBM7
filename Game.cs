@@ -12,8 +12,8 @@ namespace HWTBM7
          
             Questions [] question = CreateQuestionList();
             question[0].Answer = CreateAnswerList(3, "2020", 1,"2021", 4,"2022", 2,"2019");
-            question[1].Answer = CreateAnswerList(1, "December", 3, "March", 2, "October", 4, "November");
-            question[2].Answer = CreateAnswerList(4, "22", 1, "21", 2, "23", 3, "20");
+            question[1].Answer = CreateAnswerList(1, "December", 3, "April", 2, "October", 4, "November");
+            question[2].Answer = CreateAnswerList(4, "22", 3, "21", 2, "23", 1, "20");
             Console.WriteLine("Игра начинается ознакомьтесь с правилами!"+Environment.NewLine+  
                            " пт. 1 - для начала игры вы должны внести свое имя; " + Environment.NewLine +
                            " пт. 2 - после начала игры вам предложен ограниченный перечень вопросов по очереди; " + Environment.NewLine +
@@ -24,27 +24,32 @@ namespace HWTBM7
                            " пт. 6 - выбор при не верного ответа на вопрос, игра окончена, выйгрыш = 0; "  +Environment.NewLine +
                            " пт. 7 - при условии верного ответа на все вопросы или при вооде комманды 'Завершить игру' игрок Выйграл и может забрать свои средства. ");
            
-            GameCycle(question, user.UserQuestionNumber);
+            GameCycle(question, user);
         }
-        private void GameCycle(Questions [] question, int QuestionNumber)
+        private void GameCycle(Questions [] question, User user)
         {
-            for (int numberQuestion=QuestionNumber;numberQuestion<=2; numberQuestion++)
+            for (int numberQuestion=user.UserQuestionNumber;numberQuestion<=2; numberQuestion++)
             {
                 Console.WriteLine(question[numberQuestion].QuestionText);
-                Console.WriteLine(question[1].Answer[0].AnswerText);
 
-
-
-                for (int number = 0; number <= 3; number++)
+                for (int number = 1; number <= 4; number++)
                 {
-                   int count = number;
-                    Console.WriteLine(question[numberQuestion].Answer[count].AnswerNumber);
-                   while (question[numberQuestion].Answer[count].AnswerNumber != (number + 1))
+                   for(int count = 0; count < question[numberQuestion].Answer.Length ; count++)
                     {
-                        count++;
+                        if (question[numberQuestion].Answer[count].AnswerNumber == number)
+                        {
+                            Console.WriteLine(question[numberQuestion].Answer[count].AnswerNumber+". "+ question[numberQuestion].Answer[count].AnswerText);
+                        }
                     }
-                    Console.WriteLine(question[numberQuestion].Answer[count].AnswerNumber);
+                   
                 }
+                if (question[numberQuestion].Answer[User.GetUserChoise(1, 4, "Введите номер верного ответа")-1] is CorrectAnswer)
+                {
+                    Console.WriteLine("LOVE");
+                }
+                else
+                Console.WriteLine("FUCK");
+
             }
         }
         private  Questions [] CreateQuestionList()
